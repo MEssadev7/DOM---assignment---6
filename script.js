@@ -81,17 +81,25 @@ studentForm.addEventListener("submit", function (e) {
   const emailInput = document.querySelector("#email").value.trim();
 
   if (userInput === "") {
+    document.querySelector("#nameError").style.color = "red";
+    document.querySelector("#nameError").style.fontSize = "14px";
     document.querySelector("#nameError").textContent = "Name is required.";
     formIsValid = false;
   } else {
-    document.querySelector("#nameError").textContent = "";
+    document.querySelector("#nameError").style.color = "green";
+    document.querySelector("#nameError").style.fontSize = "14px";
+    document.querySelector("#nameError").textContent = "Name is valid.";
   }
 
   if (emailInput === "") {
+    document.querySelector("#emailError").style.color = "red";
+    document.querySelector("#emailError").style.fontSize = "14px";
     document.querySelector("#emailError").textContent = "Email is required.";
     formIsValid = false;
   } else {
-    document.querySelector("#emailError").textContent = "";
+    document.querySelector("#emailError").style.color = "green";
+    document.querySelector("#emailError").style.fontSize = "14px";
+    document.querySelector("#emailError").textContent = "Email is valid.";
   }
 
   if (formIsValid) {
